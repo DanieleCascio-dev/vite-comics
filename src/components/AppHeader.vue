@@ -60,8 +60,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1rem;
-  margin-bottom: 1rem;
+  height: 80px;
 
   .logo {
     img {
@@ -82,6 +81,7 @@ header {
         color: inherit;
         display: inline-block;
         padding: 2rem 0.5rem;
+        border-bottom: 3px solid transparent;
 
         &:hover {
           border-bottom: 3px solid $primary-color;
