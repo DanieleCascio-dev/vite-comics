@@ -72,7 +72,31 @@ export default {
         </div>
       </div>
     </div>
-    <div class="footer-bottom"></div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="btn">SIGN-UP NOW!</p>
+        <nav>
+          <ul>
+            <li>FOLLOW US</li>
+            <li>
+              <a href=""></a><img src="../img/footer-facebook.png" alt="" />
+            </li>
+            <li>
+              <a href=""></a><img src="../img/footer-twitter.png" alt="" />
+            </li>
+            <li>
+              <a href=""></a><img src="../img/footer-youtube.png" alt="" />
+            </li>
+            <li>
+              <a href=""></a><img src="../img/footer-pinterest.png" alt="" />
+            </li>
+            <li>
+              <a href=""></a><img src="../img/footer-periscope.png" alt="" />
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </footer>
 </template>
 
@@ -127,9 +151,53 @@ footer {
 
   .footer-bottom {
     height: 50px;
-    background-color: $char-color;
+    background-color: $bg-secondary;
     z-index: 2;
     position: relative;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+
+      .btn {
+        padding: 10px 15px;
+        border: 1px solid $primary-color;
+        font-size: 0.6rem;
+        color: $char-white;
+        cursor: pointer;
+
+        &:hover {
+          background-color: lighten($primary-color, 5%);
+        }
+      }
+
+      nav {
+        ul {
+          display: flex;
+          align-items: center;
+          list-style: none;
+          gap: 1rem;
+          font-size: 0.8rem;
+
+          li {
+            cursor: pointer;
+
+            &:first-child {
+              color: $primary-color;
+              font-weight: bold;
+              letter-spacing: -1px;
+              cursor: auto;
+            }
+
+            img {
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 </style>
