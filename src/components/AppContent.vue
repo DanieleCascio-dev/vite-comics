@@ -9,7 +9,7 @@ export default {
 <template>
   <main>
     <div class="container">
-      <div class="content">--> Content goes here &lt--</div>
+      <div class="content">--&gt; Content goes here &lt;--</div>
     </div>
   </main>
 </template>
