@@ -105,6 +105,7 @@ export default {
               <AppCard :imageName="comic.thumb" :title="comic.series" />
             </div>
           </div>
+          <a href="">Load More</a>
         </div>
       </div>
     </div>
@@ -129,6 +130,19 @@ main {
 
   .bottom-content {
     background-color: $bg-primary;
+    position: relative;
+
+    &::before {
+      content: "CURRENT SERIES";
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: $primary-color;
+      color: $char-white;
+      position: absolute;
+      font-weight: bold;
+      top: -16px;
+      left: 130px;
+    }
   }
 
   .container {
