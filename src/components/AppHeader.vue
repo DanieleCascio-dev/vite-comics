@@ -56,10 +56,12 @@ export default {
 
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
+@use "../style/partials/mixin" as *;
 header {
-  display: flex;
+  @include flex(row, space-between, center);
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   height: 80px;
 
   .logo {
@@ -70,7 +72,8 @@ header {
 
   nav {
     ul {
-      display: flex;
+      @include flex(row, center, center);
+      /* display: flex; */
       gap: 0.5rem;
       list-style: none;
       font-size: 0.6rem;
@@ -80,8 +83,9 @@ header {
         text-decoration: none;
         color: inherit;
         display: inline-block;
-        padding: 2rem 0.5rem;
+        padding: 2rem 0.2rem;
         border-bottom: 3px solid transparent;
+        transition: all 0.3s;
 
         &:hover {
           border-bottom: 3px solid $primary-color;

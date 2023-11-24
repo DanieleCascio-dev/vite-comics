@@ -102,6 +102,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "../style/partials/variables" as *;
+@use "../style/partials/mixin" as *;
 footer {
   height: 260px;
 
@@ -114,8 +115,9 @@ footer {
     position: relative;
 
     .list-footer {
-      display: flex;
-      justify-content: flex-start;
+      @include flex(row, flex-start, flex-start);
+      /*  display: flex;
+      justify-content: flex-start; */
 
       font-size: 0.6rem;
       gap: 1.5rem;
@@ -141,10 +143,10 @@ footer {
     .logo-dc {
       position: absolute;
       right: 70px;
-      top: -20px;
+      top: -40px;
       z-index: 1;
       img {
-        height: 250px;
+        height: 300px;
       }
     }
   }
@@ -156,9 +158,10 @@ footer {
     position: relative;
 
     .container {
-      display: flex;
+      @include flex(row, space-between, center);
+      /* display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: center; */
       height: 100%;
 
       .btn {
@@ -175,8 +178,9 @@ footer {
 
       nav {
         ul {
-          display: flex;
-          align-items: center;
+          @include flex(row, center, center);
+          /* display: flex;
+          align-items: center; */
           list-style: none;
           gap: 1rem;
           font-size: 0.8rem;
