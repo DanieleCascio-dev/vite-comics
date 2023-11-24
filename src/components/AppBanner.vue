@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     getImageUrl(img) {
-      return new URL(`./dir/${img}`, import.meta.url).href;
+      return new URL(`../img/${img}`, import.meta.url).href;
     },
   },
 };
@@ -40,7 +40,7 @@ export default {
       <ul>
         <li v-for="element in bannerIcon" index="element.title">
           <div class="logo">
-            <img src="../img/buy-comics-digital-comics.png" alt="" />
+            <img :src="getImageUrl(element.img)" alt="" />
           </div>
           <a href="">{{ element.title }}</a>
         </li>
@@ -63,23 +63,29 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     height: 100%;
+
+    li:nth-last-child(2) {
+      img {
+        width: 0.9rem;
+      }
+    }
 
     li {
       display: flex;
       gap: 0.5rem;
       align-items: center;
-      .logo {
-        img {
-          width: 30px;
-        }
+    }
+    .logo {
+      img {
+        width: 1.2rem;
       }
-      a {
-        font-size: 0.6rem;
-        text-decoration: none;
-        color: $char-white;
-      }
+    }
+    a {
+      font-size: 0.6rem;
+      text-decoration: none;
+      color: $char-white;
     }
   }
 }
