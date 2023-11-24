@@ -1,5 +1,6 @@
 <script>
 import AppCard from "./AppCard.vue";
+import AppButton from "./AppButton.vue";
 
 export default {
   data() {
@@ -90,7 +91,7 @@ export default {
       ],
     };
   },
-  components: { AppCard },
+  components: { AppCard, AppButton },
 };
 </script>
 
@@ -105,7 +106,9 @@ export default {
               <AppCard :imageName="comic.thumb" :title="comic.series" />
             </div>
           </div>
-          <a href="">Load More</a>
+          <div class="btn">
+            <AppButton content="LOAD MORE" color="blue" />
+          </div>
         </div>
       </div>
     </div>
@@ -156,7 +159,8 @@ main {
     width: 100%;
     color: #fff;
     font-weight: bold;
-    padding: 2rem 0;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
 
     .row {
       @include flex(row, center, stretch, wrap);
@@ -165,6 +169,11 @@ main {
       .col {
         width: calc(100% / 6 - 1rem);
       }
+    }
+    .btn {
+      /*  @include flex(row, center, center); */
+      text-align: center;
+      margin-top: 1.5rem;
     }
   }
 }
