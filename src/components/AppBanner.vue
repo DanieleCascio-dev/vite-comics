@@ -54,6 +54,8 @@ export default {
 section {
   background-color: $primary-color;
   height: 80px;
+  position: relative;
+  z-index: 2;
 
   .conatiner {
     height: 100%;
