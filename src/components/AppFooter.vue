@@ -104,7 +104,7 @@ export default {
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixin" as *;
 footer {
-  height: 260px;
+  min-height: 260px;
 
   .footer-top {
     height: 210px;

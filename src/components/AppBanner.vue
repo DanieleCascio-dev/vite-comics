@@ -68,11 +68,11 @@ section {
     gap: 2rem;
     height: 100%;
 
-    li:nth-last-child(2) {
+    /* li:nth-last-child(2) {
       img {
-        width: 0.9rem;
+        height: 30px;
       }
-    }
+    } */
 
     li {
       display: flex;
@@ -81,13 +81,14 @@ section {
     }
     .logo {
       img {
-        width: 1.2rem;
+        height: 30px;
       }
     }
     a {
-      font-size: 0.6rem;
+      font-size: 0.7rem;
       text-decoration: none;
       color: $char-white;
+      vertical-align: middle;
     }
   }
 }
